@@ -1,0 +1,130 @@
+:root {
+  --White: hsl(0, 0%, 100%);
+  --Stone-100: hsl(30, 54%, 90%);
+  --Stone-150: hsl(30, 18%, 87%);
+  --Stone-600: hsl(30, 10%, 34%);
+  --Stone-900: hsl(24, 5%, 18%);
+  --Brown-800: hsl(14, 45%, 36%);
+  --Rose-800: hsl(332, 51%, 32%);
+  --Rose-50: hsl(330, 100%, 98%);
+  --font-size-1: 14px;
+}
+
+* {
+  font-family: "Outfit";
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--Stone-100);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.Container {
+  width: 650px;
+  background-color: var(--White);
+  margin: 100px;
+  padding: 32px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: all .3s;
+}
+
+.Container hr {
+  color: var(--Stone-150);
+}
+
+.Container #page-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.Container #page-title {
+  color: var(--Stone-900);
+  font-family: "Young Serif";
+  font-weight: 400;
+}
+
+.Container .title:not(#page-title) {
+  color: var(--Brown-800);
+  font-family: "Young Serif";
+  font-weight: 400;
+}
+
+.Container #description,
+.Container #nutrition-description {
+  color: var(--Stone-600);
+  font-size: var(--font-size-1);
+}
+
+.Container #preparation-time {
+  padding: 32px 48px;
+  background-color: var(--Rose-50);
+  border-radius: 10px;
+}
+
+.Container #preparation-time #preparation-time-title {
+  padding: 0 0 12px 0;
+}
+
+#preparation-list,
+#ingredient-list,
+#instructions-list {
+  padding-left: 18px;
+}
+
+.item-list {
+  padding: 8px 16px;
+  font-size: var(--font-size-1);
+  color: var(--Stone-600);
+}
+
+.item-list p {
+  display: inline;
+}
+
+.item-list span {
+  font-weight: 600;
+  color: var(--Stone-900);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+tr:not(:last-child) {
+  border-bottom: 1px solid var(--Stone-150);
+}
+
+td {
+  font-size: var(--font-size-1);
+  padding: 16px;
+}
+
+td:first-child {
+  color: var(--Stone-600);
+}
+
+td:nth-child(2) {
+  color: var(--Brown-800);
+  font-weight: 600;
+}
+
+@media screen and (max-width : 724px) {
+    .Container{
+        width: 100%;
+        margin: 0;
+        border-radius: 0;
+
+    }
+    .attribution{
+        display: none;
+    }
+}
