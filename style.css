@@ -121,6 +121,11 @@ td:nth-child(2) {
   list-style-type: 1;
 }
 
+#instructions-list li::marker{
+  color: var(--Brown-800);
+  font-weight: 800;
+}
+
 @media screen and (max-width : 724px) {
     .Container{
         width: 100%;
